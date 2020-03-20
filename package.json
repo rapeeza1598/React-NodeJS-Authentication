@@ -1,6 +1,6 @@
 {
     "name": "react-and-node-js-authentication",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "nodejs login with jwt token",
     "main": "server.js",
     "scripts": {
