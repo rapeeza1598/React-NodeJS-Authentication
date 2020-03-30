@@ -13,13 +13,16 @@ app.use(
     })
 )
 
-const mongoURI = 'mongodb://localhost:27017/mernloginreg'
+const mongoURI = "mongodb://localhost:27017/mernloginreg"
 
-mongoose.connect(mongoURI, { useNewUrlParser: true }).then(() => console.log("MongoDB connected")).catch(err => console.log(err))
+mongoose
+    .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("MongoDB connected"))
+    .catch(err => console.log(err))
 
-let Users = require('./routes/Users')
+let Users = require("./routes/Users")
 
-app.use('/users', Users)
+app.use("/users", Users)
 
 app.listen(port, () => {
     console.log("Server is runing on port: " + port)
